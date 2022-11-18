@@ -1,0 +1,292 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #a3a5e7;
+}
+
+.navigation-section {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-section img {
+  height: 64px;
+  width: 64px;
+}
+
+.horizontal-list {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+}
+
+.horizontal-list a {
+  color: black;
+  text-underline-offset: 3px;
+}
+.horizontal-list a:hover {
+  color: white;
+  text-underline-offset: 3px;
+}
+
+.image-carousel {
+  display: flex;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.image-carousel > img {
+  scroll-snap-align: center;
+  width: 65%;
+  height: auto;
+}
+
+.text-section {
+  padding: 16px;
+  padding-bottom: 32px;
+  padding-top: 0;
+
+  text-align: center;
+  line-height: 1.3;
+
+  max-width: 512px;
+  margin: 0 auto;
+}
+
+.text-section > h2 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.serif {
+  font-family: serif;
+  font-style: italic;
+  font-size: 1.1em;
+}
+
+/* new */
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+/* .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+} */
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #04aa6d;
+  color: blue;
+}
+/* <!-- Hmaburger menu --> */
+/* <!-- https://codepen.io/AlperZM/pen/eYMvENP --> */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  /* box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1); */
+  overflow: hidden;
+  /* background: #7DB1C7; */
+  color: #333;
+  font-family: "Ibarra Real Nova", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: perspective(60px);
+  transform-style: preserve-3d;
+}
+
+.center {
+  position: absolute;
+  height: 200px;
+  width: 400px;
+  top: 0px;
+  left: 0;
+  transform: perspective(60px);
+  transform-style: preserve-3d;
+}
+
+.card-1 {
+  position: absolute;
+  top: 90px;
+  left: 90px;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.5);
+  animation: card1-animation 5s ease-in-out infinite both;
+}
+
+.card-2 {
+  position: absolute;
+  top: 90px;
+  left: 90px;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.5);
+  animation: card2-animation 5s ease-in-out infinite both;
+}
+
+.card-3 {
+  position: absolute;
+  top: 90px;
+  left: 90px;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.5);
+  animation: card3-animation 5s ease-in-out infinite both;
+}
+
+.header {
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px 5px 0 0;
+  background: #c7a57d;
+  color: #fff;
+  font-size: 24px;
+  line-height: 1.7;
+  text-align: center;
+  font-weight: 600;
+}
+
+.content {
+  position: absolute;
+  top: 40px;
+  width: 200px;
+  height: 160px;
+  background: #fff;
+  color: #000;
+}
+
+.content p {
+  font-size: 14px;
+  margin: 10px;
+}
+
+@keyframes card1-animation {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  33.33% {
+    transform: translate3d(145px, 0, -45px);
+  }
+
+  66.66% {
+    transform: translate3d(-145px, 0, -45px);
+  }
+}
+
+@keyframes card2-animation {
+  0%,
+  100% {
+    transform: translate3d(145px, 0, -45px);
+  }
+
+  33.33% {
+    transform: translate3d(-145px, 0, -45px);
+  }
+
+  66.66% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes card3-animation {
+  0%,
+  100% {
+    transform: translate3d(-145px, 0, -45px);
+  }
+
+  33.33% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  66.66% {
+    transform: translate3d(145px, 0, -45px);
+  }
+}
+.card {
+  padding: 10px 20px;
+  background-color: #ccd8ee;
+  position: relative;
+  border-radius: 15px;
+}
+
+.line {
+  position: absolute;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.button-wrapper {
+  align-items: center;
+}
+
+.button-wrapper a {
+  margin: 0;
+}
+
+.icon-button {
+  background-color: transparent;
+  border: none;
+  padding: 3px;
+  margin: 0;
+  min-width: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.icon-button img {
+  width: 30px;
+  object-fit: contain;
+}
+
+.button-blue {
+  background-color: #024a87;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 20px 40px;
+}
